@@ -1,5 +1,6 @@
 import { DeleteOutlined, MinusOutlined, PlusOutlined } from '@ant-design/icons';
-import { Button } from 'antd';
+import { Button, Card } from 'antd';
+import Meta from 'antd/es/card/Meta';
 import './Product.css';
 import { ProductType } from './types';
 
@@ -12,11 +13,14 @@ type Props = {
 export const Product = ({ product, onRemove, onChangeCount }: Props) => {
 	return (
 		<div className='product'>
-			<img className='product-photo' src={product.thumbnail} />
 			<div className='product-content'>
-				<div className='product-content-lef'>
-					<h3>{product.title}</h3>
-					<h5>Стоимость: {product.price} руб.</h5>
+				<div className='product-content-left'>
+					<Card
+						style={{ width: 240 }}
+						cover={<img alt='example' src={product.thumbnail} />}
+					>
+						<Meta title={product.title} description={product.title} />
+					</Card>
 				</div>
 				<div className='product-content-right'>
 					<div

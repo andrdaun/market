@@ -64,7 +64,7 @@ function App() {
 		);
 	}, [state.basket, state.data]);
 
-	if (state.isLoading) return <div>Загрузка данных ...</div>;
+	if (state.isLoading) return <div>Uploading data ...</div>;
 
 	return (
 		<div className='app'>
@@ -77,7 +77,7 @@ function App() {
 					/>
 				))}
 			</div>
-			<div className='total'>Итого: {getTotalSum} руб.</div>
+			<div className='total'>Result: {getTotalSum} rub.</div>
 		</div>
 	);
 }
