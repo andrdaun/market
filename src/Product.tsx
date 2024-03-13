@@ -20,6 +20,7 @@ export const Product = ({ product, onRemove, onChangeCount }: Props) => {
 						cover={<img alt='example' src={product.thumbnail} />}
 					>
 						<Meta title={product.title} description={product.title} />
+						<h1>Price: {product.price}</h1>
 					</Card>
 				</div>
 				<div className='product-content-right'>
